@@ -1,0 +1,26 @@
+# MCQ Screen Assistant - Dependencies
+# =====================================
+# Install with: pip install -r requirements.txt
+
+# Screen capture
+mss>=9.0.1
+
+# Image processing
+Pillow>=10.0.0
+opencv-python>=4.8.0.0
+numpy>=1.24.0
+
+# OCR
+pytesseract>=0.3.10
+
+# Global hotkeys
+keyboard>=0.13.5
+
+# UI
+PyQt5>=5.15.9
+
+# HTTP requests for Ollama API
+requests>=2.31.0
+
+# Optional: For building executable
+# pyinstaller>=6.0.0

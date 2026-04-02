@@ -1,0 +1,88 @@
+MCQ Screen Assistant - Setup Guide
+===================================
+
+Follow these steps in order. Total time: ~10 minutes.
+
+✅ STEP 1: Install Python (5 min)
+==================================
+1. Go to: https://www.python.org/downloads/
+2. Download Python 3.10 or newer
+3. Run the installer
+4. ⚠️ CHECK THE BOX: "Add Python to PATH"
+5. Click "Install Now"
+6. Verify - open Command Prompt and run:
+   python --version
+
+✅ STEP 2: Install Ollama - Local FREE AI (5 min)
+==================================================
+1. Go to: https://ollama.ai
+2. Click "Download" and select your OS
+3. Install Ollama
+4. It will start automatically (check system tray)
+5. Open Command Prompt and run:
+   ollama pull mistral
+   (Wait 2-3 minutes on first run)
+
+✅ STEP 3: Install Tesseract OCR (5 min)
+========================================
+1. Go to: https://github.com/UB-Mannheim/tesseract/wiki
+2. Download: tesseract-ocr-w64-setup-v5.x.exe
+3. Run the installer
+4. Keep default path: C:\Program Files\Tesseract-OCR\
+5. Click "Install"
+
+✅ STEP 4: Install Python Dependencies (2 min)
+===============================================
+1. Open Command Prompt in the mcq_assistant folder
+2. Type:
+   pip install -r requirements.txt
+3. Wait for installation to finish
+
+✅ STEP 5: Run the App! (1 min)
+=================================
+1. In Command Prompt, type:
+   python main.py
+2. You should see:
+   "Running in background... Press the hotkey to start."
+
+✅ DONE! 🎉
+============
+Your app is ready!
+
+HOW TO USE:
+- Press Ctrl+Shift+X to select an MCQ
+- Click and drag to select
+- Answer appears in ~2 seconds
+- Press Ctrl+Shift+Q to exit
+
+
+TROUBLESHOOTING:
+================
+
+❌ "Tesseract not found"
+   → Reinstall to: C:\Program Files\Tesseract-OCR\
+   → Restart the app
+
+❌ "Cannot connect to Ollama"
+   → Make sure Ollama is running (check system tray)
+   → Run: ollama serve
+   → Try again
+
+❌ "Model not found"
+   → Open Command Prompt
+   → Run: ollama pull mistral
+   → Wait for download
+   → Try the app again
+
+❌ "Hotkey not working"
+   → Run Command Prompt as Administrator
+   → Then run: python main.py
+
+❌ "ModuleNotFoundError"
+   → Run: pip install -r requirements.txt
+   → Try again
+
+
+Questions?
+==========
+Read README.md for more details.
